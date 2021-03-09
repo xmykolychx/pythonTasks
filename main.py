@@ -765,7 +765,20 @@ import json
 #             m = i
 #     print(m, y)
 
-
+c, l = 0, []
 with open('dataset_3363_4.txt') as file:
-    s = file.read().lower().strip().split()
-    print(s)
+    for s in file:
+        s = s.strip().split(';')
+        for i in s[1::]:
+            c += int(i)
+        print(c/3)
+        s.append(c/3)
+        l.append(s)
+        c = 0
+
+m, p, r = 0, 0, 0
+for i in l:
+    m += int(i[1])
+    p += int(i[2])
+    r += int(i[3])
+print(m/len(l), p/len(l), r/len(l))
