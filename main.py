@@ -396,7 +396,6 @@ import json
 #     email = property(fget=get_email, fset=set_email)
 
 
-
 # class BankAccount:
 #
 #     def __init__(self, name, balance):
@@ -765,20 +764,273 @@ import json
 #             m = i
 #     print(m, y)
 
-c, l = 0, []
-with open('dataset_3363_4.txt') as file:
-    for s in file:
-        s = s.strip().split(';')
-        for i in s[1::]:
-            c += int(i)
-        print(c/3)
-        s.append(c/3)
-        l.append(s)
-        c = 0
+# c, l = 0, []
+# with open('dataset_3363_4.txt') as file:
+#     for s in file:
+#         s = s.strip().split(';')
+#         for i in s[1::]:
+#             c += int(i)
+#         print(c/3)
+#         s.append(c/3)
+#         l.append(s)
+#         c = 0
+#
+# m, p, r = 0, 0, 0
+# for i in l:
+#     m += int(i[1])
+#     p += int(i[2])
+#     r += int(i[3])
+# print(m/len(l), p/len(l), r/len(l))
 
-m, p, r = 0, 0, 0
-for i in l:
-    m += int(i[1])
-    p += int(i[2])
-    r += int(i[3])
-print(m/len(l), p/len(l), r/len(l))
+# from math import pi
+# print(2 * pi * float(input()))
+
+# import sys
+# s = ''
+# s2 = ''
+# for i in range(1,len(sys.argv)):
+#     s = s + sys.argv[i]+' '
+# s2 = s
+# print(s2,end=' ')
+
+# kata codewars
+
+# s = input()
+# def bald(s):
+#     n=s.count('/')
+#     if n==0:
+#         return [s.replace('/','-'),'Clean!']
+#     elif n==1:
+#         return [s.replace('/','-'),'Unicorn!']
+#     elif n==2:
+#         return [s.replace('/','-'),'Homer!']
+#     elif 3<=n<=5:
+#         return [s.replace('/','-'),'Careless!']
+#     elif n>5:
+#         return [s.replace('/','-'),'Hobo!']
+#
+# print(bald(s))
+
+# kata
+
+# import math
+#
+# n = int(input())
+#
+# def smallest(n):
+#     a = 1
+#     for i in range(1, n + 1):
+#         a = int((a * i)/math.gcd(a, i))
+#     return a
+#
+# print(smallest(n))
+
+# kata
+
+# items = list(input().split())
+# a, b = int(input()), int(input())
+# def inverse_slice(items, a, b):
+#     return items[:a]+items[b:]
+# print(inverse_slice(items, a, b))
+
+
+# kata
+
+# def repeat_str(repeat, string):
+#     return int(repeat)*string
+# print(repeat_str(5, 'hello'))
+
+# kata
+# def twice_as_old(dad_years_old, son_years_old):
+#     return abs((son_years_old * 2) - dad_years_old)
+# print(twice_as_old(29,0))
+
+# a, b, c, d = map(int, input().split())
+# print('',*range(c, d + 1), sep='\t')
+# for i in range(a, b + 1):
+#     print(i, *range(i * c, (i * d) + 1, i), sep='\t')
+
+
+# kata
+
+
+# a = input().upper()
+#
+# def plane_seat(a):
+#     m = ''
+#     if len(a) == 3:
+#         m = a[0] + a[1]
+#         if (int(m) in range(1, 21)) and (a[2] in 'ABC'):
+#             return 'Front-Left'
+#         elif (int(m) in range(1, 21)) and (a[2] in 'DEF'):
+#             return 'Front-Middle'
+#         elif (int(m) in range(1, 21)) and (a[2] in 'GHK'):
+#             return 'Front-Right'
+#         if (int(m) in range(20, 41)) and (a[2] in 'ABC'):
+#             return 'Middle-Left'
+#         elif (int(m) in range(20, 41)) and (a[2] in 'DEF'):
+#             return 'Middle-Middle'
+#         elif (int(m) in range(20, 41)) and (a[2] in 'GHK'):
+#             return 'Middle-Right'
+#         if (int(m) in range(40, 61)) and (a[2] in 'ABC'):
+#             return 'Back-Left'
+#         elif (int(m) in range(40, 61)) and (a[2] in 'DEF'):
+#             return 'Back-Middle'
+#         elif (int(m) in range(40, 61)) and (a[2] in 'GHK'):
+#             return 'Back-Right'
+#         elif int(m) > 60 or a[2] not in 'ABCDEFGHK':
+#             return 'No Seat!!'
+#     elif len(a) == 2:
+#         if (int(a[0]) in range(1, 21)) and (a[1] in 'ABC'):
+#             return 'Front-Left'
+#         elif (int(a[0]) in range(1, 21)) and (a[1] in 'DEF'):
+#             return 'Front-Middle'
+#         elif (int(a[0]) in range(1, 21)) and (a[1] in 'GHK'):
+#             return 'Front-Right'
+#         if (int(a[0]) in range(20, 41)) and (a[1] in 'ABC'):
+#             return 'Middle-Left'
+#         elif (int(a[0]) in range(20, 41)) and (a[1] in 'DEF'):
+#             return 'Middle-Middle'
+#         elif (int(a[0]) in range(20, 41)) and (a[1] in 'GHK'):
+#             return 'Middle-Right'
+#         if (int(a[0]) in range(40, 61)) and (a[1] in 'ABC'):
+#             return 'Back-Left'
+#         elif (int(a[0]) in range(40, 61)) and (a[1] in 'DEF'):
+#             return 'Back-Middle'
+#         elif (int(a[0]) in range(40, 61)) and (a[1] in 'GHK'):
+#             return 'Back-Right'
+#         elif a[1] not in 'ABCDEFGHK':
+#             return 'No Seat!!'
+#
+# print(plane_seat(a))
+
+# s = input().lower()
+# c = 0
+# for i in s:
+#     if i == 'g' or i == 'c':
+#         c += 1
+# r = (c/len(s))*100
+# print(r)
+#
+# s = input().upper()
+# print((s.count('G') + s.count('C'))/len(s) * 100)
+
+# a = [int(i) for i in input().split()]
+# if len(a) == 1:
+#     print(a[0])
+# else:
+#     for i in range(0, len(a) - 1):
+#         print(a[i - 1] + a[i + 1], end=' ')
+#     print(a[len(a) - 2] + a[0])
+
+
+# def merge_arrays(arr1, arr2):
+#     return sorted(set(arr1+arr2))
+# print(merge_arrays([1,1,1,2,3],[4,5,6]))
+
+
+# array = [[1,2,3],
+#          [4,5,6],
+#          [7,8,9]]
+# def snail(snail_map):
+#     return list(array[0])+snail(zip(*array[1:])[::-1])if array else []
+# print(snail(array))
+
+
+# import requests
+# with open('dataset_3378_2.txt', 'r') as f:
+#     url = f.read().strip()
+#
+# r = requests.get(url)
+# c = 0
+#
+# for j in r.text.splitlines():
+#     c += 1
+#
+# print(len(r.text.splitlines()))
+
+
+# n = int(input())
+# move = {'север': 0, 'юг': 0, 'восток': 0, 'запад': 0}
+# for _ in range(n):
+#     m = input().split()
+#     if m[0] in move:
+#         move[m[0]] += int(m[1])
+# x = move['восток'] - move['запад']
+# y = move['север'] - move['юг']
+# print(x, y)
+
+# human = {}
+# h = 'John Doe California 34 self-employeed 375-10-15 15 17 19 21 23'
+# h = h.split()
+# human['firstName'] = h[0]
+# human['lastName'] = h[1]
+# human['currentCity'] = h[2]
+# human['age'] = int(h[3])
+# human['job'] = h[4]
+# human['tel'] = h[5]
+# human['jobDates'] = []
+# for i in h[6:]:
+#     human['jobDates'].append(int(i))
+# print(human)
+
+# d = {}
+# def update_dictionary(d, key, value):
+#     if (key in d.keys()):
+#         d[key].append(value)
+#     elif (key*2 in d.keys()):
+#         d[key*2] += [value]
+#     else:
+#         d[key*2] = [value]
+
+# import requests
+# from bs4 import BeautifulSoup
+#
+# class HabrPythonNews:
+#
+#     def __init__(self):
+#         self.url = 'https://habr.com/ru/hub/python/'
+#         self.html = self.get_html()
+#
+#     def get_html(self):
+#         try:
+#             result = requests.get(self.url)
+#             result.raise_for_status()
+#             return result.text
+#         except(requests.RequestException, ValueError):
+#             print('Server error')
+#             return False
+#
+#     def get_python_news(self):
+#         soup = BeautifulSoup(self.html, 'html.parser')
+#         news_list = soup.findAll('h2', class_='post__title')
+#         return news_list
+#
+# if __name__ == "__main__":
+#     news = HabrPythonNews()
+#     print(news.get_python_news())
+
+# n, m = '', []
+# while True:
+#     n = input()
+#     if n == 'end':
+#         break
+#     m.append([int(i) for i in n.split()])
+# li, lj = len(m), len(m[0])
+# new = [[sum([m[i-1][j], m[(i+1)%li][j], m[i][j-1], m[i][(j+1)%lj]]) for j in range(lj)] for i in range(li)]
+# for i in range(li):
+#     for j in range(lj):
+#         print(new[i][j], end=' ')
+#     print()
+
+# n, m = [int(i) for i in input().split()]
+# a = [[int(j) for j in input().split() for i in range(n)]]
+# x, y = 0, 0
+# mx = a[0][0]
+# for i in range(n):
+#     for j in range(m):
+#         if a[i][j] > mx:
+#             mx = a[i][j]
+#             x, y = i, j
+# print(x, y)
+
